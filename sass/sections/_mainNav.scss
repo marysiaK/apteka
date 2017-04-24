@@ -1,0 +1,125 @@
+.main-nav {
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    background-color: $primary-color;
+    left:0;
+    right: 0;
+    min-height: 30px;
+    padding: 5px;
+    box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.75);
+
+     .main-nav__links {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        font-size: 16px;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        padding: 20px;
+        text-align: center;
+        position: fixed;
+        margin: 0;
+        list-style-type: none;
+        float: right;
+        z-index: 1;
+        
+        li {
+            
+            a {
+                font-size: 15px;
+                margin: 5px 0;
+                display: block;
+                line-height: 22px;
+                color: $white;
+                text-decoration: none;
+                
+                &:hover {
+                    color: $accent-color;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: $desktop-min) { 
+        .hamburger-menu {
+            display: none;
+        }
+        .main-nav__links {
+            display: block;
+            position: static;
+            opacity: 1;
+            li {
+                display: inline-block;
+            }
+        }
+        position: fixed;
+
+        .main-nav__link {
+            line-height: 85px;
+            padding: 0 20px;
+        }
+    }   
+
+}
+
+.hamburger-menu {
+    padding: 10px;
+    right: 10px;
+    top: 10px;
+    display: block;
+    height: 20px;
+    width: 20px;
+    position: fixed;
+    z-index: 2;
+
+
+    span {
+        border-radius: 5px;
+        height: 4px;
+        width: 20px;
+        background-color: $accent-color;
+        display: block;
+        position: absolute;
+        left: 0;
+        transition: transform 0.5s ease-in-out;
+
+        &:first-of-type {
+            top: 0;
+        }
+
+        &:nth-of-type(2), &:nth-of-type(3) {
+            top: 5px;
+        }
+
+        &:nth-of-type(4) {
+            top: 10px;
+        }
+    }
+}
+
+// mobile navigation test
+
+.mobile-nav--open {
+
+    .main-nav__links {
+        display: block;
+        opacity: 1;
+        background-color: $primary-color;
+
+    }
+    .hamburger-menu span { 
+        &:first-of-type, &:nth-of-type(4) {
+            display: none;
+        }
+        &:nth-of-type(2) {
+            transform: rotate(-45deg);
+        }
+        &:nth-of-type(3) {
+            transform: rotate(45deg);
+        }
+    }
+}
+.main-nav__link {
+    display: block;
+}
