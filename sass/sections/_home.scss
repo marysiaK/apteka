@@ -1,0 +1,34 @@
+.page-section-home {
+	width:100%;
+	height: 100vh;
+}
+h2 {
+	color: $color-heading-primary;
+}
+p {
+	color: $secondary-color;
+}
+
+.hero {
+    background: url("http://placehold.it/600x300") 0/cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+}
+.hero-content {
+	position: relative;
+    padding: 250px 50px;
+    float: right;
+
+		h2 {
+		 	font-size: 3rem;
+		    color: $accent-color;
+		    font-weight: bold;
+		    letter-spacing: 2px;
+		    margin-bottom: 20px;
+		}
+
+		span {
+			color: $white;
+	}
+}

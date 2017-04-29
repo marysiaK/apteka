@@ -1,12 +1,12 @@
 .main-nav {
     transition: opacity 0.5s ease-in-out;
-    position: absolute;
-    background-color: $primary-color;
+    position: fixed;
+    background-color: $white;
     left:0;
     right: 0;
     min-height: 30px;
     padding: 5px;
-    box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.75);
+    z-index: 2;
 
      .main-nav__links {
         display: none;
@@ -32,7 +32,7 @@
                 margin: 5px 0;
                 display: block;
                 line-height: 22px;
-                color: $white;
+                color: black;
                 text-decoration: none;
                 
                 &:hover {
@@ -49,6 +49,11 @@
             display: block;
             position: static;
             opacity: 1;
+
+            ul {
+                float: right;
+            }
+
             li {
                 display: inline-block;
             }
@@ -61,7 +66,13 @@
         }
     }   
 
+    @media screen and (min-width: 1024px) and (max-width: 1105px) { 
+        .main-nav__link {
+            padding: 0 10px;
+        }
+    }
 }
+
 
 .hamburger-menu {
     padding: 10px;
@@ -101,13 +112,14 @@
 // mobile navigation test
 
 .mobile-nav--open {
+    z-index: 3;
 
     .main-nav__links {
         display: block;
         opacity: 1;
         background-color: $primary-color;
-
     }
+
     .hamburger-menu span { 
         &:first-of-type, &:nth-of-type(4) {
             display: none;
@@ -122,4 +134,60 @@
 }
 .main-nav__link {
     display: block;
+}
+
+// header logo
+.header-logo-link {
+    margin-left: 10px;
+    padding: 0 10px;
+    font-size: 24px;
+    color:  #FFD700;
+    display: block;
+    float: left;
+
+
+    @media screen and (min-width: $desktop-min) {
+        font-size: 42px;
+    }
+}
+.green-span {
+    color: $accent-color;
+}
+.name {
+
+    font-size: 16px;
+    display: block;
+    text-align: center;
+
+     @media screen and (min-width: $desktop-min) {
+        font-size: 20px;
+    }
+}
+
+// header additional information
+.header-information {
+    position: fixed;
+    top: 50px;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    background-color: $accent-color;
+    color: $white;
+    padding: 10px;
+    box-shadow: 0px 3px 15px 0px rgba(0,0,0,0.75);
+
+    .information-item {
+        margin: 0 30px;
+        display: block;
+
+        @media screen and (min-width: $desktop-min) {
+            display: inline-block;
+        }
+
+    }
+
+    @media screen and (min-width: $desktop-min) { 
+        top: 82px;
+
+    }
 }
