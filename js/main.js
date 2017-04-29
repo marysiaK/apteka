@@ -14,7 +14,6 @@ $( document ).ready(function() {
     sr.reveal('.page-section', { duration: 1000, distance: '50px' });
 
     // smooth scroll
-
     $(function() {
       $('a[href*="#"]:not([href="#"])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -28,5 +27,10 @@ $( document ).ready(function() {
           }
         }
       });
+    });
+
+    //slick slider
+    $('.hero-slider').slick({
+      autoplay: true,
     });
  });
