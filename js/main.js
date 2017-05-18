@@ -33,4 +33,23 @@ $( document ).ready(function() {
     $('.hero-slider').slick({
       autoplay: true,
     });
+
+    $('.products-slider').slick({
+      autoplay: true,
+      slidesToShow: 7,
+      responsive: [
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 4,
+          }
+        },
+      ]
+    });
  });

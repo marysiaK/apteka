@@ -4,21 +4,25 @@
 }
 .page-section-about {
   color: #000;
-  text-align: left;
+  //text-align: left;
 
-    .about-text {
-    @media screen and (min-width: $desktop-min) {
-      text-align: center;
-      padding-left: 50px;
-      padding-right: 20px;
-      width: 100%;
+    
+  @media screen and (min-width: $desktop-min) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 50px;
+  max-width: 700px;
+  margin: 0 auto;
+
+    //  text-align: center;
+  //    padding-left: 50px;
+    //  padding-right: 20px;
+   //   width: 100%;
     }
-        h2, h4 {
-            font-size: 3rem;
-            color: $accent-color;
-            letter-spacing: 1.2px; 
-            padding: 0 20px;
-    }
+     
     p {
       line-height: 1.8;
       padding: 20px 20px;
@@ -33,25 +37,8 @@
       float: right;
       margin-top: -20px;
     }        
-  }
-  .about-img {
-    @media screen and (min-width: $desktop-min) {
-      float: left;
-      width: 49%;
-    }
-    img {
-      max-width: 100%;
-      display: block;
-      margin: 0 auto;
-    }
-  } 
-  .content-container {
-    &:after {
-      content:"";
-      display: table;
-      clear: both;
-    }
-  }    
+  
+ 
 }
 
 

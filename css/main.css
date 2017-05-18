@@ -55,6 +55,11 @@ a {
   color: inherit;
   text-decoration: none; }
 
+.row-wrapper:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 .main-nav {
   transition: opacity 0.5s ease-in-out;
   position: fixed;
@@ -201,41 +206,34 @@ a {
   font-size: 24px; }
 
 .page-section-about {
-  color: #000;
-  text-align: left; }
+  color: #000; }
   @media screen and (min-width: 1024px) {
-    .page-section-about .about-text {
-      text-align: center;
-      padding-left: 50px;
-      padding-right: 20px;
-      width: 100%; } }
-  .page-section-about .about-text h2, .page-section-about .about-text h4 {
-    font-size: 3rem;
-    color: #48cc95;
-    letter-spacing: 1.2px;
-    padding: 0 20px; }
-  .page-section-about .about-text p {
+    .page-section-about {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      position: relative;
+      padding: 50px;
+      max-width: 700px;
+      margin: 0 auto; } }
+  .page-section-about p {
     line-height: 1.8;
     padding: 20px 20px;
     font-size: 1.4rem;
     font-weight: 400;
     color: #939393; }
-  .page-section-about .about-text a {
+  .page-section-about a {
     text-decoration: none;
     float: right;
     margin-top: -20px; }
-  @media screen and (min-width: 1024px) {
-    .page-section-about .about-img {
-      float: left;
-      width: 49%; } }
-  .page-section-about .about-img img {
-    max-width: 100%;
-    display: block;
-    margin: 0 auto; }
-  .page-section-about .content-container:after {
-    content: "";
-    display: table;
-    clear: both; }
 
 .page-section-hero {
   padding-top: 135px; }
@@ -248,8 +246,47 @@ a {
     .page-section-hero {
       padding-top: 100px; } }
 
+.products-slider {
+  margin: 40px auto 0;
+  max-width: 90%; }
+  .products-slider img {
+    margin: 0 1vw; }
+
+.products-list {
+  list-style-type: disc;
+  text-align: center;
+  margin-top: 20px; }
+  .products-list li {
+    margin-bottom: 10px; }
+  @media screen and (min-width: 1024px) {
+    .products-list {
+      float: right;
+      text-align: left;
+      margin-top: 0;
+      padding-left: 20px;
+      padding-right: 20px;
+      width: 50%; } }
+
+@media screen and (min-width: 1024px) {
+  .about-img {
+    float: left;
+    width: 50%; } }
+
+.about-img img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto; }
+
+.slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 .page-section-contact {
-  background-color: #E6E6E6;
+  background-color: #48cc95;
   padding-top: 20px; }
   .page-section-contact .content-wrapper {
     display: -webkit-box;
@@ -262,22 +299,8 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 50px 15px; }
-    @media screen and (min-width: 1024px) {
-      .page-section-contact .content-wrapper {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row; } }
-
-.contact-form-wrapper {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%; }
-  @media screen and (min-width: 1024px) {
-    .contact-form-wrapper {
-      -ms-flex-preferred-size: 70%;
-          flex-basis: 70%;
-      padding-right: 30px; } }
+    padding: 20px 10px;
+    line-height: 20px; }
 
 .contact-info {
   -ms-flex-preferred-size: 100%;
@@ -288,70 +311,21 @@ a {
     .contact-info {
       -ms-flex-preferred-size: 30%;
           flex-basis: 30%;
-      margin-top: 0; } }
-  .contact-info .contact-link {
-    float: none;
-    font-size: 16px;
-    margin: 5px 0;
-    padding: 10px 10px;
-    display: block;
-    line-height: 20px;
-    color: #2E2E2E;
-    text-decoration: none; }
-    .contact-info .contact-link:hover {
-      color: #48cc95; }
-  .contact-info .icon-wrapper {
-    display: block;
-    padding: 0 9px;
-    margin-bottom: 5px; }
-    .contact-info .icon-wrapper i {
-      font-size: 40px; }
-    @media screen and (min-width: 1024px) {
-      .contact-info .icon-wrapper {
-        display: inline-block;
-        margin-bottom: 0; }
-        .contact-info .icon-wrapper i {
-          font-size: 16px; } }
+      margin-top: 0;
+      text-align: center; } }
 
-.contact-form, .contact-info {
-  text-align: center; }
-  @media screen and (min-width: 1024px) {
-    .contact-form, .contact-info {
-      text-align: left; } }
+.google-maps {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden; }
 
-.form-input {
-  background-color: #fff;
-  margin-bottom: 10px;
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 38px;
-  border: none;
-  padding-left: 20px;
-  font-size: 16px;
-  border: 1px solid #E6E6E6;
-  border-radius: 4px;
-  color: #5d717e; }
-  .form-input::-webkit-input-placeholder {
-    font-family: Roboto; }
-  .form-input.textarea {
-    height: 200px;
-    resize: none;
-    text-align: left;
-    padding: 15px;
-    box-shadow: inset 0px -20px 43px -40px rgba(0, 0, 0, 0.75); }
-
-.btn-send {
-  background-color: #5d717e;
-  color: #fff;
-  border-radius: 2px;
-  border: 0;
-  transition: background-color .2s ease-out;
-  margin: 6px 0;
-  height: 40px;
-  width: 100px;
-  text-transform: uppercase;
-  -webkit-appearance: none; }
-  .btn-send:hover {
-    background-color: #48cc95; }
+  height: 100%; }
 
 footer {
   width: 100%;
