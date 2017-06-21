@@ -1,16 +1,16 @@
 .page-section-hero {
-	padding-top:135px;
+    padding-top:135px;
 
-	.slick-next {
-		right: 25px;
-	}
+    .slick-next {
+        right: 25px;
+    }
 
-	.slick-prev {
-		left: 25px;
-		z-index: 2;
-	}
+    .slick-prev {
+        left: 25px;
+        z-index: 2;
+    }
 
-	@media screen and (min-width: 508px) { 
-		padding-top: 100px;
-	}
+    @media screen and (min-width: 508px) { 
+        padding-top: 100px;
+    }
 }

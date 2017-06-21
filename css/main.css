@@ -165,10 +165,11 @@ a {
   font-size: 24px;
   color: #FFD700;
   display: block;
-  float: left; }
+  text-align: center; }
   @media screen and (min-width: 1024px) {
     .header-logo-link {
-      font-size: 42px; } }
+      font-size: 42px;
+      float: left; } }
 
 .green-span {
   color: #48cc95; }
@@ -206,7 +207,10 @@ a {
   font-size: 24px; }
 
 .page-section-about {
-  color: #000; }
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 20px;
+  width: 100%; }
   @media screen and (min-width: 1024px) {
     .page-section-about {
       display: -webkit-box;
@@ -221,15 +225,18 @@ a {
           -ms-flex-pack: center;
               justify-content: center;
       position: relative;
-      padding: 50px;
       max-width: 700px;
       margin: 0 auto; } }
   .page-section-about p {
+    font-size: 16px;
     line-height: 1.8;
-    padding: 20px 20px;
-    font-size: 1.4rem;
-    font-weight: 400;
+    padding: 0 20px;
     color: #939393; }
+    @media screen and (min-width: 1024px) {
+      .page-section-about p {
+        line-height: 1.8;
+        font-size: 24px;
+        font-weight: 400; } }
   .page-section-about a {
     text-decoration: none;
     float: right;
@@ -276,6 +283,10 @@ a {
   max-width: 100%;
   display: block;
   margin: 0 auto; }
+  @media screen and (min-width: 1024px) {
+    .about-img img {
+      margin-right: 50px;
+      float: right; } }
 
 .slick-track {
   display: -webkit-box;
@@ -289,30 +300,15 @@ a {
   background-color: #48cc95;
   padding-top: 20px; }
   .page-section-contact .content-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     padding: 20px 10px;
     line-height: 20px; }
 
 .contact-info {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  margin-top: 30px;
-  color: #fff; }
-  @media screen and (min-width: 1024px) {
-    .contact-info {
-      -ms-flex-preferred-size: 30%;
-          flex-basis: 30%;
-      margin-top: 0;
-      text-align: center; } }
+  color: #fff;
+  text-align: center; }
+
+.contact-info-item {
+  padding-bottom: 20px; }
 
 .google-maps {
   position: relative;

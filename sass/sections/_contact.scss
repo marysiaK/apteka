@@ -1,25 +1,18 @@
-    .page-section-contact {
+.page-section-contact {
      background-color: $accent-color;
      padding-top: 20px;
     
     .content-wrapper {
-    	display: flex;
-        justify-content : center;
-        flex-direction: column;
         padding: 20px 10px; 
         line-height: 20px;
     }
 }
 
 .contact-info {
-    flex-basis: 100%;
-    margin-top: 30px;
     color: $white;
-    
+    text-align: center;
+}
 
-    @media screen and (min-width: $desktop-min) { 
-        flex-basis: 30%;
-        margin-top: 0;
-        text-align: center;
-    }
+.contact-info-item {
+    padding-bottom: 20px;
 }
