@@ -286,6 +286,7 @@ a {
   @media screen and (min-width: 1024px) {
     .about-img img {
       margin-right: 50px;
+      padding-left: 50px;
       float: right; } }
 
 .slick-track {
