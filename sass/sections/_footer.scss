@@ -2,12 +2,11 @@ footer {
     width: 100%;
     background-color: $primary-color;
     text-align: center;
+    p {
+        height: 80px;
+        line-height: 80px;
+        color: $accent-color;
+        margin: 0;  
+    }
 }
-footer p {
-    height: 80px;
-    line-height: 80px;
-    color: $accent-color;
-    margin: 0;  
-}
-
 

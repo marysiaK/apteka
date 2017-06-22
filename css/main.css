@@ -317,21 +317,19 @@ a {
   padding-bottom: 75%;
   height: 0;
   overflow: hidden; }
-
-.google-maps iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
+  .google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
 footer {
   width: 100%;
   background-color: #5d717e;
   text-align: center; }
-
-footer p {
-  height: 80px;
-  line-height: 80px;
-  color: #48cc95;
-  margin: 0; }
+  footer p {
+    height: 80px;
+    line-height: 80px;
+    color: #48cc95;
+    margin: 0; }
