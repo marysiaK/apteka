@@ -115,6 +115,7 @@ a {
       padding: 0 10px; } }
 
 .hamburger-menu {
+  margin: 0 28px;
   padding: 10px;
   right: 10px;
   top: 10px;
@@ -126,7 +127,7 @@ a {
   .hamburger-menu span {
     border-radius: 5px;
     height: 4px;
-    width: 20px;
+    width: 45px;
     background-color: #48cc95;
     display: block;
     position: absolute;
@@ -137,9 +138,9 @@ a {
     .hamburger-menu span:first-of-type {
       top: 0; }
     .hamburger-menu span:nth-of-type(2), .hamburger-menu span:nth-of-type(3) {
-      top: 5px; }
+      top: 12px; }
     .hamburger-menu span:nth-of-type(4) {
-      top: 10px; }
+      top: 24px; }
 
 .mobile-nav--open {
   z-index: 3; }
@@ -161,8 +162,9 @@ a {
 
 .header-logo-link {
   margin-left: 10px;
+  margin-right: 38px;
   padding: 0 10px;
-  font-size: 24px;
+  font-size: 20px;
   color: #FFD700;
   display: block;
   text-align: center; }
